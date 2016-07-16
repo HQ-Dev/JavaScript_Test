@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Shopping list</title>
+	</head>
+
+	<body>
+		<h1>What to buy</h1>
+		<p title="a gentle reminder">Don not forget to buy this stuff.</p>
+		<ul id="purchases">
+			<li>A tin of beans</li>
+			<li class="sale">Cheese</li>
+			<li class="sale important">Milk</li>
+		</ul>
+
+		<script>
+			alert(typeof document.getElementById("purchases"));
+			// 下面会得到一个对象的数组，而不是 getElementById 这样得到一个对象
+			alert(document.getElementsByTagName('li').length);
+			// 遍历 li 对象数组，并显示它为对象
+			var items = document.getElementsByTagName('li').length;
+			for (var i = 0; i < items; i++) {
+				alert(typeof document.getElementsByTagName('li')[i]);
+			}
+			// 想知道文档中总共有多少的元素节点
+			alert(document.getElementsByTagName("*").length);
+
+			// getElementsByClassName 
+			alert(document.getElementsByClassName("important sale").length);
+		</script>
+	</body>
+
+</html>
