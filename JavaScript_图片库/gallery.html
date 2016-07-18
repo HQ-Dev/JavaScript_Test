@@ -9,20 +9,22 @@
 	<h1>Snapshots</h1>
 	<ul>
 		<li>
-			<a href="images/cat.jpg" tittle="A cat">Cat</a>
+			<a href="images/cat.jpg" onclick="showPic(this); return false;" tittle="A cat">Cat</a>
 		</li>
 		<li>
-			<a href="images/chicken.jpg">chicken</a>
+			<a href="images/chicken.jpg" onclick="showPic(this); return false;">chicken</a>
 		</li>
 		<li>
-			<a href="images/desert.jpg">desert</a>
+			<a href="images/desert.jpg" onclick="showPic(this); return false;">desert</a>
 		</li>
 		<li>
-			<a href="images/sceen.jpg">sceen</a>
+			<a href="images/sceen.jpg" onclick="showPic(this); return false;">sceen</a>
 		</li>
 	</ul>
 
 	<!-- 设置图片的占位符号 -->
 	<img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+	
+	<script type="text/javascript" src="scripts/showPic.js"></script>
 </body>
 </html>
