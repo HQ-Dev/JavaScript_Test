@@ -3,27 +3,33 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Image Gallery</title>
+	<link type="text/css" rel="stylesheet" href="css/gallery.css" />
 </head>
 
 <body>
 	<h1>Snapshots</h1>
 	<ul>
 		<li>
-			<a href="images/cat.jpg" onclick="showPic(this); return false;" tittle="A cat">Cat</a>
+			<a href="images/cat.jpg" onclick="showPic(this); return false;" title="A cat">Cat</a>
 		</li>
 		<li>
-			<a href="images/chicken.jpg" onclick="showPic(this); return false;">chicken</a>
+			<a href="images/chicken.jpg" onclick="showPic(this); return false;" title="A chicken">chicken</a>
 		</li>
 		<li>
-			<a href="images/desert.jpg" onclick="showPic(this); return false;">desert</a>
+			<a href="images/desert.jpg" onclick="showPic(this); return false;" title="A desert">desert</a>
 		</li>
 		<li>
-			<a href="images/sceen.jpg" onclick="showPic(this); return false;">sceen</a>
+			<a href="images/sceen.jpg" onclick="showPic(this); return false;" title="A sceen">sceen</a>
 		</li>
 	</ul>
-
+	
+	<div>
+		<button onclick="countBodyChildren(this)">共有多少标签元素</button>
+	</div>
+	<br><hr>
 	<!-- 设置图片的占位符号 -->
-	<img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+	<img id="placeholder" width="400px" height="350px" src="images/placeholder.gif" alt="my image gallery" />
+	<p id="description">choose an image.</p>
 	
 	<script type="text/javascript" src="scripts/showPic.js"></script>
 </body>
