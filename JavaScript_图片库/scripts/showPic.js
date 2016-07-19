@@ -7,8 +7,9 @@ function showPic(whichpic) {
 		var text = whichpic.getAttribute("title");
 		var description = document.getElementById("description");
 		description.firstChild.nodeValue = text;
+		return false;
 	} // 如果存在，它就会被更新，否则就会被忽略；
-	return true;
+	 else return true;
 }
 
 function countBodyChildren() {
@@ -42,6 +43,6 @@ function addLoadEvent(func) {
 	}
 }
 
-addLoadEvent(countBodyChildren);
-addLoadEvent(addLoadEvent);
+//addLoadEvent(countBodyChildren);
+addLoadEvent(prepareGallery);
 
