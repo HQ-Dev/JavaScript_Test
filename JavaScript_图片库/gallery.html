@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Image Gallery</title>
-	<link type="text/css" rel="stylesheet" href="css/gallery.css" />
+	<link type="text/css" rel="stylesheet" href="css/layout.css" media="screen"/>
 </head>
 
 <body>
 	<h1>Snapshots</h1>
-	<ul>
+	<ul id="imagegallery">
 		<li>
 			<a href="images/cat.jpg" onclick="showPic(this); return false;" title="A cat">Cat</a>
 		</li>
@@ -28,7 +28,7 @@
 	</div>
 	<br><hr>
 	<!-- 设置图片的占位符号 -->
-	<img id="placeholder" width="400px" height="350px" src="images/placeholder.gif" alt="my image gallery" />
+	<img id="placeholder" width="" height='' src="images/placeholder.gif" alt="my image gallery" />
 	<p id="description">choose an image.</p>
 	
 	<script type="text/javascript" src="scripts/showPic.js"></script>
