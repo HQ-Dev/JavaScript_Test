@@ -1,10 +1,14 @@
 function displayAbbreviations() {
+	if (!document.getElementByTagName || !document.createElement
+			|| !document.createTextNode) return false;
+	// 取得所有缩略词
 	// 遍历文档中的所有 abbr 元素
 	var abbreviations = document.getElementsByTagName("abbr");
 	// 如果文档中没有 abbr 元素，这个函数将就此结束
 	if (abbreviations.length < 1) return false;
 	// 获取并保存每个 abbr 元素提供的信息
 	var defs = new Array();
+	// 遍历这些缩略词
 	for (var i = 0; i < abbreviations.length; i++) {
 		var current_abbr = abbreviations[i];
 		var definition = current_abbr.getAttribute("title");
@@ -22,6 +26,7 @@ function displayAbbreviations() {
 		var ddesc = document.createElement("dd");
 		var ddesc_text = document.createTextNode(definition);
 		ddesc.appendChild(ddesc_text);
+	// 把它们添加到定义列表	
 		dlist.appendChild(dtitle);
 		dlist.appendChild(ddesc);
 	}
@@ -36,3 +41,4 @@ function displayAbbreviations() {
 	document.body.appendChild(dlist);
 }
 
+addLoadEvent(displayAbbreviations);
